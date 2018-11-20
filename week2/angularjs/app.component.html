@@ -1,0 +1,40 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h2>
+    student details table
+  </h2>
+  <!DOCTYPE html>
+<html>
+<head>
+<style>
+thead {color:green;}
+tbody {color:blue;}
+tfoot {color:red;}
+
+table, th, td {
+    border: 0.1px solid black;
+}
+</style>
+</head>
+
+<body>
+
+<table align="center">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Roll number</th>
+      <th>Marks</th>
+      <th>Department</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let s of st">
+      <td >{{s.name}}</td>
+      <td>{{s.rno}}</td>
+      <td>{{s.marks}}</td>
+      <td>{{s.depat}}</td>
+    </tr>
+    </table>
+    </body>
+    </html>
