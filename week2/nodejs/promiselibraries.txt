@@ -1,0 +1,44 @@
+  promise libraries????
+   if we want to use promises in our code then we need to include promise libraries.
+The different types of promise libraries are
+ 1.Q library:
+     example:
+       var Q=require('q');
+       var deffered=Q.defer();
+       var promise=deferred.promise;
+       promise.then(function(val){
+        console.log(val);
+       })
+       promise.catch(function(err){
+       console.log(err);
+       })
+       deffered.resolve("something");
+              or
+       deffered.reject("error");
+   first require the q library and access the q library by using Q object.
+   using the Q object we need to call thye defer() that returns the deffered object.
+   using the deffered object we need to access the object.
+   using promise variable we can call the then function.
+   if we want to resolve the promise then call the resolve function by using deffered object.
+   catch function catches the error that was send by the reject function.
+
+ 2.Bluebird library
+    Another way of using promises in our code is by using bluebird library.
+
+   example:
+      var Bluebird=require('bluebird');
+      var bluebirdpromise=new Bluebird(
+        function(resolve,reject){
+         resolve ("something");
+                or
+         reject ("error");
+         })
+
+
+    bluebirdpromise
+    .then(function(data){
+     console.log(data);
+     })
+    .catch(function(err){
+     console.log(err);
+     }) 

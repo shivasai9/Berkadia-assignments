@@ -1,0 +1,29 @@
+  what is npm???
+    npm stands for node package manager. it is preinstalled with node.js. by using this npm we can easily install the modules
+and packages. It makes easy for developers to share and reuse the code. It is a open source software.
+     The components present in npm are:
+      1.website
+      2.Command Line Interface (cli)
+      3.registry
+
+       some of the packages in npm are
+   1.Async: Async is a utility module which provides straight-forward, powerful functions for working with asynchronous JavaScript.
+   2.Browserify: Browserify will recursively analyze all the require() calls in your app in order to build a bundle you can serve up to the browser in a single <script> tag.
+   3.Express: Express is a fast, un-opinionated, minimalist web framework. It provides small, robust tooling for HTTP servers, making it a great solution for single page applications, web sites, hybrids, or public HTTP APIs.
+   4.Gulp: is a streaming build system that helps you automate painful or time-consuming tasks in your development workflow.
+   5.Lodash: The lodash library exported as a node module. Lodash is a modern JavaScript utility library delivering modularity, performance, & extras.
+   6.Nodemon: It is a simple monitor script for use during development of a node.js app, It will watch the files in the directory in which nodemon was started, and if any files change, nodemon will automatically restart your node application.
+   7.Q: Q is a library for promises. A promise is an object that represents the return value or the thrown exception that the function may eventually provide.
+   8.Socket.io: Its a node.js realtime framework server.
+   9.Csv: csv module has four sub modules which provides CSV generation, parsing, transformation and serialization for Node.js.
+  10.Debug: Debug is a tiny node.js debugging utility modelled after node core's debugging technique.
+  11.Bower: Bower is a package manager for the web. It works by fetching and installing packages from all over, taking care of hunting, finding, downloading, and saving the stuff you’re looking for.
+  12.Forever: A simple CLI tool for ensuring that a given node script runs continuously (i.e. forever).
+  13.Grunt: is a JavaScript Task Runner that facilitates creating new projects and makes performing repetitive but necessary tasks such as linting, unit testing, concatenating and minifying files (among other things) trivial.
+  14.Hapi: is a streaming build system that helps you automate painful or time-consuming tasks in your development workflow.
+  15.Nodemailer: This module enables e-mail sending from a Node.js applications.
+  16.Yo: A CLI tool for running Yeoman generators
+  17.Underscore: Underscore.js is a utility-belt library for JavaScript that provides support for the usual functional suspects (each, map, reduce, filter...) without extending any core JavaScript objects.
+  18.Validator: A nodejs module for a library of string validators and sanitizers.
+  19.Through: It enables simplified stream construction. It is easy way to create a stream that is both readable and writable.
+  20.Sails : API-driven framework for building realtime apps, using MVC conventions (based on Express and Socket.io)

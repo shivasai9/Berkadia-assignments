@@ -1,0 +1,25 @@
+  what is a module???
+    A module is a buildin block where we can define our functionsand variables.
+    Every function in a node application is considered as a module.
+    Every node application will have one module compulsary called main module.
+    A module has 7 properties
+     1.id
+     2.exports
+     3.parent
+     4.file name
+     6.loaded
+     7.children
+     8.paths
+  There are two types of modules are present they are
+  1.local modules.
+  2.global modules.
+ 
+  1.local modules:
+        If we use these modules in our application then if we make any changes in our application then we need to run it again to get the updated output.
+      installation:
+            npm install module_name
+  2.Global modules:
+        If we use these global modules in our application then if we make any changes in our application then it will automatically runs and output is updated.
+      installation:
+            npm install -g module_name
+     Examples: nodemon, live-server etc.    
