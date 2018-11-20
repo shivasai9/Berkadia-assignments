@@ -1,0 +1,24 @@
+ what is http??
+ It is a protocol used for transfering the data(Data communication) from client to server. The fullform of http is hyper test transfer protocol.
+ The http methods are
+ 1.GET
+   It is used to read the data from the server.
+ 2.POST
+   It is used the write or insert data to the server.
+ 3.PUT
+   It is used to update the data in the server.
+ 4.DELETE
+   It is used to delete the data in the server.
+ 
+  Clasification of http methods:
+ Based on data operations it is divided into 2 types they are
+ 1.readonly methods.
+   examples: Get
+ 2.write methods.
+   examples: Post, Put, Delete. 
+
+ Based on repeatability they are divide into 2 types they are
+ 1.Repeatable methods.
+   examples: Get, Put, Delete.
+ 2.Non-Repeatable methods. 
+   examples: Post.

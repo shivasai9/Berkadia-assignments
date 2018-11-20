@@ -1,0 +1,7 @@
+1. what is v8 engine??
+    It is a java script engine which converts java script into machine code. 
+  why conversion???
+   generally browser cannot understand the java script. it understands only the machine code so we need to convert java
+script into browser understandable machine code
+   V8 engine was developed by google written in c++ because nodejs itself written in c++ if we want to include v8 engine 
+in nodejs it should also written in c++. it is also called as java script virtual machine. it is similar to jvm(java virtual machine). 

@@ -1,0 +1,6 @@
+ Content delivery network??
+
+   If more people are using the same webite at same time then that website server may become slow and unresponsive.
+   If we want to avoid this problem we need to use this content delivery network(cdn).
+   CDN distributes the data content of a website and put it into the servers which are close to the people by this we can 
+    eliminate the above problem. 

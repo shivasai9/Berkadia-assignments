@@ -1,0 +1,5 @@
+   why nodejs??
+  1. It is very fast because it runs on v8 engine and uses non blocking i/o.
+  2. It uses java script so no need of learning another language.
+  3. It is a open source software.
+  4. It has a node package manager(npm) from which we can get the the packages used for our application.

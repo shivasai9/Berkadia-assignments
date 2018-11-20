@@ -1,0 +1,5 @@
+ Idempotency???
+  It is a property of certain operations in mathematics and in computer science that can be applied multiple times without
+changing the result.
+ All Repeatable http methods are called idempotent methods because if we call this repeatable http methods(get, put, delete)
+ multiple times then it will not effect the server.

@@ -1,0 +1,7 @@
+ Data structures??
+    The way of organising or arranging the data is called a data structure.
+    There are 2 types of data structures are present they are
+    1.linear data structures
+    2.non-linear data structures
+    Examples for linear data structures are stack, linkedlist, queue, Array etc
+    Examples for non-linear data structures are Trees, Graphs, tables etc  
