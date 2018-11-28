@@ -1,0 +1,17 @@
+[
+  {
+    "id": 3,
+    "name": "electro magnetics",
+    "dept": "cse"
+  },
+  {
+    "id": 9,
+    "name": "shiva",
+    "dept": "cse"
+  },
+  {
+    "id": 4,
+    "name": "java1 programming",
+    "dept": "cse"
+  }
+]
