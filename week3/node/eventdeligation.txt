@@ -1,0 +1,11 @@
+what is event deligation?????
+ event deligation is also called as event bubbling or event propagation.
+ it is a strategy that we can use to optimise the performance of our web apps when responding to our events.
+
+ example:
+   when we pour soda into a glass a bubble will go from bottom to top.
+   on web page bubbling means when there is an event on web page the execution of the events goes from the lowest element to the top.
+   let child, parent and body have a click event 
+   when we click on the child button,
+     1st it executes the child click event then it would go to the parent click event and then it executes the body click event.
+   Event bubbling means events are executed from bottom to top like a bubble in the soda. 

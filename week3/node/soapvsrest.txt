@@ -1,0 +1,34 @@
+  WHAT IS SOAP????
+   it stands for simple object access protocol.
+   it is a heavy weight choice for web serice access.
+   it is a xml based message protocol.
+   it invokes services by calling rpc(rempote procedural call) method.
+   it does not return human readable return.
+   data transfer is over http and also uses other protocols such as smtp,ftp etc.
+   java script can call soap but it is difficult to implement.
+
+  ADVANTAGES OF SOAP AVER REST ARE
+   language, platform and transport independent.
+   it has buildin error handling.
+   automation when we use certain language proucts.
+
+  WHAT IS REST????
+   it stands for representative state transfer.
+   it is an architectural style protocol.
+   it uses xml or json to snd and receive data.
+   it simply calls services via url path.
+   it returns the result which is readable and it is a plain xml or json.
+   data transfer is over http only.
+   it is easy to call from java script.
+   
+  ADVANTAGES OF REST OVER SOAP???
+   performance is much better than soap.
+   non expensive tools are required to interact with web services.
+   we can learn it easily.
+   it is efficient because it uses smaller message formats.
+   it is fast compared to soap.
+
+we need to select soap or rest based on the 
+  1.programming language we use
+  2.environment which we use it.
+  3.depends on the requirements of the application.
