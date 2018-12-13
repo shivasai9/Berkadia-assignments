@@ -1,0 +1,24 @@
+ What is DDOS attack???
+  it stands for distributed denial of service attack.
+  The main aim  of ddos attack is to slow down the popular websites.
+  it is a cyber attack on a specific server or network.
+  it is an intended purpose of disrupting normal operation of a web page and flooding it with a constant flood of traffic.
+
+ Denial of service attack?????
+  DOS attack is an attack which is coming from only one server.
+  But the network or server can easily able to handle the attack because there is only one source.
+  simply the server can close the connection from where the attack is coming from.
+
+ Distributed DOS attack????
+  it is an attack which comes from multiple sources simultaneously.
+
+ How attacker gets the other sources to get involved in DDOS attack????  
+  The attacker will develop a malware program and distribute it to internet and he will put it on some websites or sends an email attachments containing the malware program.
+  if anyone go to that infected websites or opens the infected email attachments then the malware will be installed in their computer without the permission of owner.
+  The group of all these infected computers are  called as "BOTNET".
+  There is no end for botnet.
+  The attacker controls all the infected devices.
+  i.e attacker is the master and all the infected devices are the slaves.
+  These all infected devices can attack simultaneously to a certain server or network due to which the website using that server becomes very slow and unresponsive.
+  This is what the DDOS attack mean.
+  

@@ -1,0 +1,26 @@
+Frameworks other than express???
+
+ 1.Hapi
+     it is used for larger enterprise applications.
+     it uses declarative configuration.
+     here we need to create an object for each route. by using this object we can describe what we want to do.
+     for example we can call a function to process that request or we can do authentication or we can do data validation.
+     similar to express hapi has its own ecosystem of middleware which is not compatable with the express and vice versa.
+     The eco system for hapi is much smaller.
+     hapi allows us to customize more things when it comes to request handler.
+2.Koa
+    koa is similar to express but it uses only async and await.
+3.Loopback
+    it is maintaining by ibm.
+    it has a database library and a web interface which allows us to create a project with less code.
+    loopback is for those people who don't like to code much.
+    But loopback is difficult to learn
+    it is compatable with express.
+4.Mean
+    Mean.js is a full-fledged JavaScript framework to build web applications using NoSQL database, MongoDB as well as Angular.js for the 
+    front-end and Express.js/Node.js for the backend (server). It also leverages the Grunt tool to enable automated testing. Mean.js and Mean.io 
+    are both considered a part of Mean stack. Mean stands for MongoDB, Express.js, Angular.js and Node.js.
+5.Sails
+    Sails.js is one of the most popular real-time frameworks around for building Node.js applications. Sails.js offers a model-view controller (MVC) 
+    pattern for implementing data-driven application programming interfaces (APIs). The framework has gained ground for building real-time chat applications, 
+    dashboards and multiplayer games.Sails.js is built on top of Node.js and uses Express.js for handling HTTP requests. 
