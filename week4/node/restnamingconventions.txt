@@ -1,0 +1,72 @@
+   Rest naming conventions???
+
+   URI(uniform resourse locator):
+    it is a string of characters used to identify a resource either by location(URL) or by name(URN).
+  for web applications we get a message from server and view it on page. uri's depends on the type of framework we use.
+  for example consider a folder whose name is site and that folder contains multiple files they are index.html,first.html etc.
+  in olden days to render the static web pages they used the following syntax for uri's
+   ex:1   website.com/site/index.html
+  consider a folder whose name is profiles which contains all the static html files which contain the user profile data. 
+   ex:2   /profiles/shiva.html
+
+  if we drop the .html extention from the above uri then we call that uri as restful resourse based uri.
+       /profiles/shiva
+       /profiles/{profilename}
+ In order to built the uri's we need to follow two rules they are
+  1.uri should contain only nouns not verbs.
+      typically the nouns are resourse names itself
+        ex: messages,profiles etc
+
+  2.resourse names should be plural.
+        ex:1 /profiles/{profilename}
+        ex:2 /messages/{messageid}
+     2nd rule makes us clear that under slash(/) we have multiple messages or multiple profile names.
+  The advantage of the resourse uri is that they don't depend on the framework what we use.
+   ex:/comments/{commentid}
+
+      the above example is the resourse uri for comments.
+  The above uri is correct but we can implement it by another way using "resourse relations"
+  here the comments resourse will depend on the message resourse.
+  there is a one to many relationship between message and comments.
+
+    ex:1 /messages/{messageid}/comments/{commentid}
+        the above uri is better because by seeing this uri we knows that a comment is belongs to the particular message.
+    ex:2 /messages/{messageid}/likes/{likeid}
+
+ Restful uri's are divided into 2 types they are
+  1.instance resourse uri
+  2.collection uri
+
+1.instance resourse uri:
+    instance resourse uri identifies the specific instance of the uri.
+    a single instance of the message/commentt/any resource is accessable by this instance resourse uri.
+    these instance resourse uri will typically have a unique id of the resource in the url to identify the what is the 
+    instance of the url we are intersted in.
+       ex: to get a message from  the particular is we use instance uri.
+   if we want to get all the messages we will use collection uri. 
+2.collection uri:
+    these uri's represent a collection/list of resourses. 
+      ex:1 /messages
+             it returns all the messages
+      ex:2 /profiles
+             it returns all the profile names
+      ex:3 /messages/{messageid}/comments
+             it returns all the comments for a particular meessage.
+      ex:4 /comments
+             it returns all the comments.
+   in the above examples it returns the large amount of data 
+   so, we need to filter it or paginate 
+   one way of filter the results is by providing query parameters.
+       ex:1 /messages?offset=30&limit=10
+            the above uri will return the mesages starting from message number 30 and the next 10 messages after message number 30.
+
+       ex:2 /messages?year=2018
+             this uri will return the messages of the year 2018.
+
+       ex:3 /messages?year=2018&offset=30&limit=10
+ 
+   typically collection uri's are plurals.
+   instance resourse uri's has the collection resourse uri followed by the unique identifier.
+   
+           
+  
