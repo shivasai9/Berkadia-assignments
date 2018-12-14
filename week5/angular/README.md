@@ -1,3 +1,19 @@
+The above project uses the following concepts
+ 1.services
+ 2.ngfor directive and its properties.
+ 3.ngif directive.
+ 4.ngclass directive
+ 5.ngstyle directive
+ 6.safe traversal operator.
+ 7.ngswitch directive
+ 8.string interpolation.
+ 9.property binding.
+ 10.event binding.
+ 11.class binding
+ 12.dependency injection
+ 13.style binding.
+ 14.hidden property.
+
 # Directives
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.6.
