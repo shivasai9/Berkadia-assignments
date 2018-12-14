@@ -1,4 +1,4 @@
-The above project uses the following concepts
+The above project uses these concepts
  1.services
  2.ngfor directive and its properties.
  3.ngif directive.
