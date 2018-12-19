@@ -1,0 +1,33 @@
+ what is babel???
+ babel is a javascript compiler which converts newer versions of java script code to older versions.
+ it takes the latest version of java script as input and converts it into es5 or older versions.
+ 
+ why should we convert newer version into older versions???
+
+  most of the browsers cannot support the latest version of java script so, at that time we need to convert that newer version
+  into older version by using babel.
+
+steps to be followed to use babel
+1. npm init --yes
+   run this command to create json file
+
+2. npm i --save-dev babel-cli babel-preset-env
+   run this command to install babel
+
+3.create .babelrc file
+   this file contains an object
+    {
+     "presets":["env"] 
+     }
+   env is a shortcut for telling babel that we are compiling from es15 or es16 or from latest versions.
+
+4.in json file under scripts add 
+   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "babel newversion -d oldversion"
+  }
+ here newversion is a folder which contains latest versions of java script files.
+ oldversion is target folder which consists of older versions of java script code.
+
+5.npm start
+   run this command then babel will convert the latest version of java script code into older versions and store it in oldversion folder.  
