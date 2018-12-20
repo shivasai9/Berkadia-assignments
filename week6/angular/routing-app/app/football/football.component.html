@@ -1,0 +1,17 @@
+
+<div class="row">
+    <div class="col-xs-12 col-sm-4">
+      <div class="list-group">
+        <a
+           [routerLink]="['/football',player.id]"
+           class="list-group-item"
+           *ngFor="let player of players">
+           {{ player.name }}
+        </a>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-4">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+<button class="btn btn-primary" (click)="gohome()">go to home</button>
