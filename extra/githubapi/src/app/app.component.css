@@ -1,0 +1,43 @@
+*{
+    padding:0px;
+    margin:0px;
+}
+header {
+    background:gray;
+    color: white;
+    margin-top:20px;
+}
+.input{
+    margin:20px;
+}
+.input button{
+    padding: 2px 32px;
+}
+.students {
+    float:left;
+    width:20%;
+    
+}
+.students ul{
+    margin-left:30px;
+    list-style-type: none;
+}
+.image{
+    float:right;
+    width:70%;
+}
+.image img{
+    width:20%;
+}
+.image a{
+    background-color: gray;
+    color:white;
+}
+.input w3-text-teal b{
+    color:gray;
+}
+ header .logo {
+    float:left;
+    padding-left:20px;
+    padding-top: 10px; 
+ } 

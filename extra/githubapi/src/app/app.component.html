@@ -1,0 +1,26 @@
+<header>
+    <img class="logo" src="../assets/images/logo (2).jpg">
+    <h1 align="center" >
+      Welcome to the github search
+    </h1>
+</header>
+
+<div class="input">
+        <label><b>Enter the student number or student name or any github user name</b></label>
+  <input class="w3-input w3-border w3-light-grey" type="text" [(ngModel)]="val">
+  <button (click)=search() class="w3-btn w3-blue-gray">click</button>
+ </div> 
+<div class="students">
+<ul>
+    <li *ngFor="let student of students;index as i">
+       {{i+1}}.{{student}}
+    </li>
+</ul>
+</div>
+    <div *ngIf="response" class="image">
+      <h2>
+          {{response?.name}}
+      </h2>  
+      <img src="{{response?.avatar_url}}"><br>
+      <a href="https://github.com/{{response?.login}}" target="_blank">Go to {{response.name}} Repositories</a>
+    </div>
