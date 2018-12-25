@@ -9,3 +9,4 @@ mainly this project focuses on the air quality index data of the cities:
  8.patna
  
  if we click on the more info then we get the more information about the air quality of that particular city.
+ depending on the value of air quality index the color of the progress bar changes.
