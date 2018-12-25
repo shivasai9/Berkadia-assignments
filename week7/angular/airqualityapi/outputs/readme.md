@@ -1,4 +1,4 @@
-mainly this project focuses on the air quality index data of the following cities:
+mainly this project focuses on the air quality index data of the cities:
  1.paris
  2.beijing
  3.adelide
