@@ -1,0 +1,96 @@
+  container ????
+     a container is a running instance of an image.
+
+1.docker ps 
+     it is used to list the running containers.
+
+shiva sai@DESKTOP-80BSJ9T MINGW64 /c/Program Files/Docker Toolbox
+$ docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+
+it is showing no containers because there is no running container.
+
+2.docker ps -a
+     it is used to list all the containers both running and not-running.
+
+shiva sai@DESKTOP-80BSJ9T MINGW64 /c/Program Files/Docker Toolbox
+$ docker ps -a
+CONTAINER ID        IMAGE               COMMAND             CREATED              STATUS                          PORTS               NAMES
+41f6553ca8b7        rrb                 "ruby index.rb"     About a minute ago   Exited (0) About a minute ago                       epic_jennings
+7c15354aeedb        rrb                 "ruby index.rb"     About an hour ago    Exited (0) About an hour ago                        affectionate_swanson
+81bdbf790fab        ruby                "ruby index.rb"     About an hour ago    Exited (1) About an hour ago                        thirsty_bassi
+3eb079d86350        rrb                 "ruby index.rb"     3 days ago           Exited (0) 3 days ago                               xenodochial_sammet
+f8e619114d2e        ruby                "ruby index.rb"     3 days ago           Exited (1) 3 days ago                               happy_stallman
+ae2d2d018376        ruby                "ruby index.rb"     3 days ago           Exited (1) 3 days ago                               goofy_taussig
+418a4fc5fbc7        ruby                "ruby index.rb"     3 days ago           Exited (1) 3 days ago                               musing_antonelli
+84340c36ec17        ruby                "ruby index.rb"     3 days ago           Exited (1) 3 days ago                               dazzling_fermi
+a726f9257da1        ruby                "."                 3 days ago           Created                         3000/tcp            gallant_liskov
+15b10117b699        ruby                "ruby index.rb"     3 days ago           Exited (1) 3 days ago                               dazzling_lehmann
+ac87e83ac736        ruby                "ruby index.rb"     3 days ago           Exited (1) 3 days ago                               quirky_kowalevski
+5760297189b2        ruby                "ruby index.rb"     3 days ago           Exited (1) 3 days ago                               sleepy_jackson
+598299084cf1        4ab4c602aa5e        "/hello"            3 days ago           Exited (0) 3 days ago                               pensive_cori
+0e05899a3d17        4ab4c602aa5e        "/hello"            3 days ago           Exited (0) 3 days ago                               gracious_lumiere
+d865f1467b1e        4ab4c602aa5e        "/hello"            3 days ago           Exited (0) 3 days ago                               lucid_gates
+
+
+3.docker run image_name
+     it is used to create the container.
+     if the image is not available then it will be automatically  download from docker hub and runs that image.
+
+shiva sai@DESKTOP-80BSJ9T MINGW64 /c/Program Files/Docker Toolbox
+$ docker run hello-world
+Unable to find image 'hello-world:latest' locally
+latest: Pulling from library/hello-world
+d1725b59e92d: Already exists
+Digest: sha256:0add3ace90ecb4adbf7777e9aacf18357296e799f81cabc9fde470971e499788
+Status: Downloaded newer image for hello-world:latest
+
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+ 1. The Docker client contacted the Docker daemon.
+ 2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+    (amd64)
+ 3. The Docker daemon created a new container from that image which runs the
+    executable that produces the output you are currently reading.
+ 4. The Docker daemon streamed that output to the Docker client, which sent it
+    to your terminal.
+
+To try something more ambitious, you can run an Ubuntu container with:
+ $ docker run -it ubuntu bash
+
+Share images, automate workflows, and more with a free Docker ID:
+ https://hub.docker.com/
+
+For more examples and ideas, visit:
+ https://docs.docker.com/get-started/
+
+4.docker start container_id/name
+     it will start the conatiner.
+
+5.docker stop container_id/name
+     it will stop the container.
+
+6.docker pause container_id/name
+     it will pause the container.
+
+7.docker unpause container_id/name
+     it will unpause the container.
+
+8.docker top container_id/name
+     it will show the top processes of the container.
+
+9.docker stats container_id/name
+     it will show the status of the running container like memory usage, cpu performance etc.
+
+10.docker attach container_id/name
+     use docker attach to attach your terminal's standard input, output, and error (or any combination of the three)
+     to a running container using the container's id or name.
+
+11.docker kill container_id/name
+     it is used to kill one or more containers.
+
+12.docker rm container_id/name
+     it is used to delete the one or more containers.
+     

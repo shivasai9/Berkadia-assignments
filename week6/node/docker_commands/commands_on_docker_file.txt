@@ -1,0 +1,38 @@
+  docker file??
+    it is a text file with instructions to build image.
+   steps to be followed:
+    1.create a file named dockerfile
+    2.add instructions in docker file
+    3.build docker file to create image
+    4.run image to create container. 
+
+1.docker build .
+    here the dot indicates the current folder.
+    us this command to build the docker file if we are in the folder where docker file contains.
+   if we are not on the folder where docker file contains then use the following command
+
+C:\Users\shiva sai\Desktop\berkadia\docker>docker build .
+Sending build context to Docker daemon  3.584kB
+Step 1/3 : FROM python:2.7-onbuild
+2.7-onbuild: Pulling from library/python
+d660b1f15b9b: Downloading [========>                                          ]  9.655MB/54.25MB
+46dde23c37b3: Download complete
+6ebaeb074589: Downloading [============>                                      ]     11MB/43.3MB
+e7428f935583: Downloading [=>                                                 ]  4.259MB/131.1MB
+0c3de61682aa: Waiting
+56f10ddf1173: Waiting
+4473537c621d: Waiting
+3106f7df3d1c: Waiting
+3de1c6ceef68: Waiting
+2.docker build path
+    we need to specify the path where the docker file contains.
+
+3.docker build -t image_name:tag .
+    building image with specific tag.
+
+4.docker run imageid/name
+    it is used to run the image.
+
+shiva sai@DESKTOP-80BSJ9T MINGW64 /c/Program Files/Docker Toolbox
+$ docker run rrb
+hello world

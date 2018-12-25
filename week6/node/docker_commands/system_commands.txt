@@ -1,0 +1,27 @@
+1.docker stats
+    it will show us about the running containers status.
+
+2.docker system df
+    it will show the disk usage of the docker.
+
+shiva sai@DESKTOP-80BSJ9T MINGW64 /c/Program Files/Docker Toolbox
+$ docker system df
+TYPE                TOTAL               ACTIVE              SIZE                RECLAIMABLE
+Images              4                   3                   869MB               868.9MB (99%)
+Containers          17                  0                   0B                  0B
+Local Volumes       0                   0                   0B                  0B
+Build Cache                                                 0B                  0B
+
+3.docker system prune
+    it will remove the unused data such as dangling images
+    dangling images are the images which are not associated with the running container. 
+
+
+shiva sai@DESKTOP-80BSJ9T MINGW64 /c/Program Files/Docker Toolbox
+$ docker system prune
+WARNING! This will remove:
+        - all stopped containers
+        - all networks not used by at least one container
+        - all dangling images
+        - all build cache
+Are you sure you want to continue? [y/N] n 

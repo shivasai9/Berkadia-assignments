@@ -1,0 +1,358 @@
+ docker images??
+  docker images are the templates used to create docker containers.
+
+1.docker images
+  which gives the list of images we have.
+
+shiva sai@DESKTOP-80BSJ9T MINGW64 /c/Program Files/Docker Toolbox
+$ docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+rrb                 latest              4f9aa2a3b382        3 days ago          869MB
+ruby                latest              5020b5977d03        3 days ago          869MB
+ruby                <none>              7834f5f61ba8        12 days ago         869MB
+hello-world         latest              4ab4c602aa5e        3 months ago        1.84kB
+
+2.docker pull image_name
+   it will pull the image from docker hub.
+
+$ docker pull hello-world
+Using default tag: latest
+latest: Pulling from library/hello-world
+Digest: sha256:0add3ace90ecb4adbf7777e9aacf18357296e799f81cabc9fde470971e499788
+Status: Image is up to date for hello-world:latest
+
+3.docker images -a
+   it will give us the id of the images.
+
+shiva sai@DESKTOP-80BSJ9T MINGW64 /c/Program Files/Docker Toolbox
+$ docker images -a
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+rrb                 latest              4f9aa2a3b382        3 days ago          869MB
+<none>              <none>              c295767f20c1        3 days ago          869MB
+ruby                latest              5020b5977d03        3 days ago          869MB
+<none>              <none>              f173935dc3f7        3 days ago          869MB
+ruby                <none>              7834f5f61ba8        12 days ago         869MB
+hello-world         latest              4ab4c602aa5e        3 months ago        1.84kB
+
+4.docker images --help
+   it will give the help regarding images
+
+shiva sai@DESKTOP-80BSJ9T MINGW64 /c/Program Files/Docker Toolbox
+$ docker images --help
+
+Usage:  docker images [OPTIONS] [REPOSITORY[:TAG]]
+
+List images
+
+Options:
+  -a, --all             Show all images (default hides intermediate images)
+      --digests         Show digests
+  -f, --filter filter   Filter output based on conditions provided
+      --format string   Pretty-print images using a Go template
+      --no-trunc        Don't truncate output
+  -q, --quiet           Only show numeric IDs
+
+5.docker images -a
+   it will give us all the details of all the images.
+
+shiva sai@DESKTOP-80BSJ9T MINGW64 /c/Program Files/Docker Toolbox
+$ docker images -a
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+rrb                 latest              4f9aa2a3b382        3 days ago          869MB
+<none>              <none>              c295767f20c1        3 days ago          869MB
+ruby                latest              5020b5977d03        3 days ago          869MB
+<none>              <none>              f173935dc3f7        3 days ago          869MB
+ruby                <none>              7834f5f61ba8        12 days ago         869MB
+hello-world         latest              4ab4c602aa5e        3 months ago        1.84kB
+
+6.docker rmi image_id/name
+    it will remove or delete the image with id image_id
+    if we want to remove the image then it should not be in the running state.
+    if we want to remove the image which is in running state then use force flag.
+
+7.docker rmi -f image_name/id
+
+shiva sai@DESKTOP-80BSJ9T MINGW64 /c/Program Files/Docker Toolbox
+$ docker rmi -f hello-world
+Untagged: hello-world:latest
+Untagged: hello-world@sha256:0add3ace90ecb4adbf7777e9aacf18357296e799f81cabc9fde470971e499788
+Deleted: sha256:4ab4c602aa5eed5528a6620ff18a1dc4faef0e1ab3a5eddeddb410714478c67f
+
+8.docker images -f "dangling=true"
+    it will give the list of images which are associated with running container.
+
+shiva sai@DESKTOP-80BSJ9T MINGW64 /c/Program Files/Docker Toolbox
+$ docker images -f "dangling=true"
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+
+right now there are no images which are associated with running container.
+
+9.docker inspect image_name
+   it will give all the details of the image.
+
+
+shiva sai@DESKTOP-80BSJ9T MINGW64 /c/Program Files/Docker Toolbox
+$ docker inspect rrb
+[
+    {
+        "Id": "sha256:4f9aa2a3b3827f2008e7708fceb9194e0decf288aa18e0757a965c160a909903",
+        "RepoTags": [
+            "rrb:latest"
+        ],
+        "RepoDigests": [],
+        "Parent": "sha256:c295767f20c171fada882c2ac87c72c65c9431179bc7397c79f5dec354804424",
+        "Comment": "",
+        "Created": "2018-12-22T16:45:41.99028696Z",
+        "Container": "f1d0a6686aca30e2ce32b6ce1b3fcec2736e60a1ff7f96faf9dc145cacfffc90",
+        "ContainerConfig": {
+            "Hostname": "f1d0a6686aca",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "ExposedPorts": {
+                "3000/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/bundle/bin:/usr/local/bundle/gems/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "RUBY_MAJOR=2.5",
+                "RUBY_VERSION=2.5.3",
+                "RUBY_DOWNLOAD_SHA256=1cc9d0359a8ea35fc6111ec830d12e60168f3b9b305a3c2578357d360fcf306f",
+                "RUBYGEMS_VERSION=2.7.8",
+                "BUNDLER_VERSION=1.17.2",
+                "GEM_HOME=/usr/local/bundle",
+                "BUNDLE_PATH=/usr/local/bundle",
+                "BUNDLE_SILENCE_ROOT_WARNING=1",
+                "BUNDLE_APP_CONFIG=/usr/local/bundle"
+            ],
+            "Cmd": [
+                "/bin/sh",
+                "-c",
+                "#(nop) ",
+                "CMD [\"ruby\" \"index.rb\"]"
+            ],
+            "ArgsEscaped": true,
+            "Image": "sha256:c295767f20c171fada882c2ac87c72c65c9431179bc7397c79f5dec354804424",
+            "Volumes": null,
+            "WorkingDir": "",
+            "Entrypoint": null,
+            "OnBuild": [],
+            "Labels": {}
+        },
+        "DockerVersion": "18.09.0",
+        "Author": "",
+        "Config": {
+            "Hostname": "",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "ExposedPorts": {
+                "3000/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/bundle/bin:/usr/local/bundle/gems/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "RUBY_MAJOR=2.5",
+                "RUBY_VERSION=2.5.3",
+                "RUBY_DOWNLOAD_SHA256=1cc9d0359a8ea35fc6111ec830d12e60168f3b9b305a3c2578357d360fcf306f",
+                "RUBYGEMS_VERSION=2.7.8",
+                "BUNDLER_VERSION=1.17.2",
+                "GEM_HOME=/usr/local/bundle",
+                "BUNDLE_PATH=/usr/local/bundle",
+                "BUNDLE_SILENCE_ROOT_WARNING=1",
+                "BUNDLE_APP_CONFIG=/usr/local/bundle"
+            ],
+            "Cmd": [
+                "ruby",
+                "index.rb"
+            ],
+            "ArgsEscaped": true,
+            "Image": "sha256:c295767f20c171fada882c2ac87c72c65c9431179bc7397c79f5dec354804424",
+            "Volumes": null,
+            "WorkingDir": "",
+            "Entrypoint": null,
+            "OnBuild": [],
+            "Labels": null
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 868949974,
+        "VirtualSize": 868949974,
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/mnt/sda1/var/lib/docker/overlay2/bfe0d71a5e23312e70ea3137c8a0eed319f9ca5dd6e3a658a53a4de7dbc86e6b/diff:/mnt/sda1/var/lib/docker/overlay2/568ff8fa38d49fe15f6c14beb44dd00703ca713a464b1ec01d3ec066adafbb60/diff:/mnt/sda1/var/lib/docker/overlay2/a1878ac1a6859210a9e75e2fb518b8e2979ef06bbe7c9cfecf9a2dfbf2bd5d2e/diff:/mnt/sda1/var/lib/docker/overlay2/4c7a1dc3c26a7f62f550d04eca1ccb0b4d86f3f276912593333427ffc1eb5239/diff:/mnt/sda1/var/lib/docker/overlay2/ffeed5f0c53edd72a198296744d28facca66c947f94d49cd2309bdd32882cb6a/diff:/mnt/sda1/var/lib/docker/overlay2/0d296e6e6666af6aab9194ebacb7fb3bce99b7ddf3a1244607ccb5105024ee11/diff:/mnt/sda1/var/lib/docker/overlay2/cb100dd513a7d83176b969fbef2f02b37cab9079a17c8ccba073636fade392da/diff:/mnt/sda1/var/lib/docker/overlay2/e72fc2f7abfdf2576c475c753b9e306a7cb2d0cd76104d9b571cef331c19d61f/diff",
+                "MergedDir": "/mnt/sda1/var/lib/docker/overlay2/e00dc3537e70654b3c4e02d3f54218497e1dbfac65048039832f8aaaeaff82e0/merged",
+                "UpperDir": "/mnt/sda1/var/lib/docker/overlay2/e00dc3537e70654b3c4e02d3f54218497e1dbfac65048039832f8aaaeaff82e0/diff",
+                "WorkDir": "/mnt/sda1/var/lib/docker/overlay2/e00dc3537e70654b3c4e02d3f54218497e1dbfac65048039832f8aaaeaff82e0/work"
+            },
+            "Name": "overlay2"
+        },
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:90d1009ce6fe3102fee728742a3bd73eea2b39c88cdda99977a3fb130dbc17ac",
+                "sha256:c23711a84ad43e5062e70a4055d7df344087649bec7eac06a40a8b1af4cef86e",
+                "sha256:8f7ee6d76fd9da1ecfcfcd893357e78d7dcd4ca877295b7565c71728411f9126",
+                "sha256:f75e64f96dbc610a00722afa3826745952db8d1416f6405e7e87c20868b9f542",
+                "sha256:e02b32b1ff99a237da5c0cc4bb46dd672447b66c1b524975ae1f59c11abfd79c",
+                "sha256:759fe7d2c74fa593bc3d77d0cece7e4dcffb526b47b71cb792cdadaa23f89822",
+                "sha256:c35321d5c67578f227d0f0f94098c8b7dbbc9e48bc6a5927bb75853972633f8d",
+                "sha256:67f541c16493fa04da0bcf4446ccfbd4a77edb05de27ae5044cb0728c96eb4ad",
+                "sha256:0dad46eacebc42597cc9d82bc38faa05ecd32b39e7a558e1675139fdec654738"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2018-12-22T16:45:42.724608639Z"
+        }
+    }
+]
+
+10.docker history image_name
+     it gets the history of the image.
+
+$ docker history rrb
+IMAGE               CREATED             CREATED BY                                      SIZE                COMMENT
+4f9aa2a3b382        3 days ago          /bin/sh -c #(nop)  CMD ["ruby" "index.rb"]      0B
+c295767f20c1        3 days ago          /bin/sh -c #(nop) COPY file:85cab15f7abd4813…   237B
+5020b5977d03        3 days ago          /bin/sh -c #(nop)  CMD ["ruby" "index.rb"]      0B
+f173935dc3f7        3 days ago          /bin/sh -c #(nop)  EXPOSE 3000                  0B
+7834f5f61ba8        12 days ago         /bin/sh -c #(nop)  CMD ["irb"]                  0B
+<missing>           12 days ago         /bin/sh -c mkdir -p "$GEM_HOME" && chmod 777…   0B
+<missing>           12 days ago         /bin/sh -c #(nop)  ENV PATH=/usr/local/bundl…   0B
+<missing>           12 days ago         /bin/sh -c #(nop)  ENV BUNDLE_PATH=/usr/loca…   0B
+<missing>           12 days ago         /bin/sh -c #(nop)  ENV GEM_HOME=/usr/local/b…   0B
+<missing>           12 days ago         /bin/sh -c set -ex   && buildDeps='   bison …   39.1MB
+<missing>           12 days ago         /bin/sh -c #(nop)  ENV BUNDLER_VERSION=1.17.2   0B
+<missing>           5 weeks ago         /bin/sh -c #(nop)  ENV RUBYGEMS_VERSION=2.7.8   0B
+<missing>           5 weeks ago         /bin/sh -c #(nop)  ENV RUBY_DOWNLOAD_SHA256=…   0B
+<missing>           5 weeks ago         /bin/sh -c #(nop)  ENV RUBY_VERSION=2.5.3       0B
+<missing>           5 weeks ago         /bin/sh -c #(nop)  ENV RUBY_MAJOR=2.5           0B
+<missing>           5 weeks ago         /bin/sh -c mkdir -p /usr/local/etc  && {   e…   45B
+<missing>           5 weeks ago         /bin/sh -c set -ex;  apt-get update;  apt-ge…   556MB
+<missing>           5 weeks ago         /bin/sh -c apt-get update && apt-get install…   142MB
+<missing>           5 weeks ago         /bin/sh -c set -ex;  if ! command -v gpg > /…   7.81MB
+<missing>           5 weeks ago         /bin/sh -c apt-get update && apt-get install…   23.2MB
+<missing>           5 weeks ago         /bin/sh -c #(nop)  CMD ["bash"]                 0B
+<missing>           5 weeks ago         /bin/sh -c #(nop) ADD file:a61c14b18252183a4…   101MB
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
