@@ -1,0 +1,48 @@
+<div class="container">
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+      aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="">Home <span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+    </div>
+    <span class="text-white">
+      <h6>enter any city name:</h6>
+    </span>
+    <div class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" [(ngModel)]="cityname">
+      <p class="search"><a class="btn btn-outline-success my-2 my-sm-0" routerLink="airdata" role="button" (click)="sendcity(cityname)">Search</a></p>
+    </div>
+  </nav>
+  <main role="main">
+    <div class="jumbotron">
+      <div class="container">
+        <h1 class="display-3">Air quality check</h1>
+        <p>An air quality index (AQI) is a number used by government agencies to communicate to the public how polluted
+          the air currently is or how polluted it is forecast to become....</p>
+        <p><a class="btn btn-sm" routerLink="image" role="button">Learn more »</a></p>
+      </div>
+    </div>
+    <div class="container" id="border">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-3" *ngFor="let city of row1cities">
+          <h2>{{city}}</h2>
+          <p><a class="btn btn-secondary" routerLink="airdata" role="button" (click)="sendcity(city)">View details »</a></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3" *ngFor="let city of row2cities">
+          <h2>{{city}}</h2>
+          <p><a class="btn btn-secondary" routerLink="airdata" role="button" (click)="sendcity(city)">View details »</a></p>
+        </div>
+      </div>
+    </div>
+    <hr>
+  </main>
+</div>

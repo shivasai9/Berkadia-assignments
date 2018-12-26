@@ -1,0 +1,66 @@
+<div class="container">
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+      aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="{{response?.data?.city?.url}}" target="_blank">More info <span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+<div class="container">
+  <div class="jumbotron text-center">
+    <div class="container">
+      <h4>
+        Air quality index data of {{response?.data?.city?.name}}
+      </h4>
+      <hr>
+      <h6><span class="border border-dark">AQI: {{response?.data?.aqi}}</span></h6>
+      <h6><span class="border border-dark">Air Pollution Level: {{apl}}</span></h6>
+      <p><strong>Health implications:</strong> {{info}}</p>
+      <p><strong>Precautions:</strong>{{precautions}}</p>
+      <p class="border border-dark">
+        <ngb-progressbar value="{{response?.data?.aqi}}" type="{{color}}"></ngb-progressbar>
+      </p>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <ul class="list-group">
+    <li class="list-group-item d-flex justify-content-between align-items-center bg-primary">
+      <span class="text-white"> pm25</span>
+      <span class="badge badge-primary badge-pill">{{response?.data?.iaqi?.pm25?.v}}</span>
+    </li>
+    <li class="list-group-item d-flex justify-content-between align-items-center bg-secondary">
+      <span class="text-white"> pm10</span>
+      <span class="badge badge-secondary badge-pill">{{response?.data?.iaqi?.pm10?.v}}</span>
+    </li>
+    <li class="list-group-item d-flex justify-content-between align-items-center bg-info">
+      <span class="text-white"> nitrogen dioxide</span>
+      <span class="badge badge-info badge-pill">{{response?.data?.iaqi?.no2?.v}}</span>
+    </li>
+    <li class="list-group-item d-flex justify-content-between align-items-center bg-success">
+      <span class="text-white"> ozone</span>
+      <span class="badge badge-success badge-pill">
+        {{response?.data?.iaqi?.o3?.v}} </span>
+    </li>
+    <li class="list-group-item d-flex justify-content-between align-items-center bg-warning">
+      <span class="text-white">sulphur dioxide</span>
+      <span class="badge badge-warning badge-pill"><span class="text-white"> {{response?.data?.iaqi?.so2?.v}}</span></span>
+    </li>
+    <li class="list-group-item d-flex justify-content-between align-items-center bg-danger">
+      <span class="text-white"> carbon monoxide</span>
+      <span class="badge badge-danger badge-pill">{{response?.data?.iaqi?.co?.v}}</span>
+    </li>
+  </ul>
+</div>
