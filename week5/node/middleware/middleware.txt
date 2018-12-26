@@ -1,0 +1,11 @@
+   what is middleware function??
+    a middleware function is a function that takes a request object and either returns a response to a client or passes 
+    control to another middleware function.
+    if we get a request on the server then that request goes to request processing pipeline and in this pipeline we have 
+    one or more middleware functions each middleware function either terminates request or it passes control to another middleware function.
+    there are 5 types of middleware functions are available they are
+     1.Application-level middleware
+     2.Router-level middleware
+     3.Error-handling middleware
+     4.Built-in middleware
+     5.Third-party middleware
