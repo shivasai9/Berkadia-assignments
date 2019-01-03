@@ -1,0 +1,71 @@
+.jumbotron{
+    padding:5px;
+    margin:0px;
+    border:0.5px black solid;
+    border-bottom: none;
+    /* background-image: url(../assets/images/images.jpg) */
+}
+#border{
+    border:0.5px black solid;
+    background-color:#E9ECEF;
+}
+.btn{
+    background-color:#6C757D;
+    color: white;
+}
+.search{
+    margin-top:18px;
+}
+.navbar{
+    background-color:#02132B;
+    margin-bottom: 0px;
+}
+.nav-link{
+    color: white;
+}
+#button{
+    background-color:#6C757D;
+    color: white;
+}
+.container{
+    margin-top:150px;
+}
+#container{
+    margin-top:0px;
+}
+
+
+
+
+input[type="checkbox"]{
+    width: 30px; 
+    height: 30px;
+  }
+
+.list-group{
+    flex-direction: row;
+}
+
+#seats2{
+    float:center;
+     margin-left:200px;
+}
+
+ #seats1{
+    float:left;
+
+} 
+
+.screen{
+background-color: black;
+color: white;
+margin-left:10px;
+width: 33%;
+padding-left: 150px;
+padding-bottom: 20px;
+padding-top:20px
+}
+.afterbooking{
+    float:right;
+    width:50%;
+}

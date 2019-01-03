@@ -1,0 +1,61 @@
+<div class="container">
+  <nav class="navbar navbar-expand-md ">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+      aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="">Home <span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <main role="main">
+    <div class="jumbotron">
+      <div class="screen ">
+        <h5>screen</h5>
+      </div><br>
+      <div class="container" id="container">
+        <div *ngIf="seatscount">
+          <ul class="list-unstyled" id="seats1">
+            <li *ngFor="let val of fiveseats;index as i">
+              <ul class="list-group list-unstyled">
+                <li *ngFor="let val of fiveseats;index as j">
+                  <input ngModel type="checkbox" name="{{i}}{{j}}" #checkbox="ngModel" (change)="log(checkbox)"
+                    [disabled]="isdisabled">
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <div class="afterbooking" *ngIf="finaldatadisplay">
+            <h5><strong>Theatre name:</strong>{{finaldata[0]?.theatrename}}</h5>
+            <h5><strong>Movie name:</strong>{{finalmoviename}}</h5>
+            <h5><strong>{{const}} tickets was booked successfully</strong></h5>
+
+            <h5><strong>Available tickets after booking:</strong>{{finaldata[0]?.availableseats}}</h5>
+            <h5><strong>Database updated successfully</strong></h5>
+          </div>
+          <div id="seats2">
+            <ul class="list-unstyled">
+              <li *ngFor="let val of fiveseats;index as i">
+                <ul class="list-group list-unstyled">
+                  <li *ngFor="let val of fiveseats;index as j">
+                    <input ngModel type="checkbox" name="{{i}}{{j}}" #checkbox="ngModel" (change)="log(checkbox)"
+                      [disabled]="isdisabled">
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <h5><strong> number of seats</strong>:{{seats[0]?.totalseats}}</h5>
+          <h5><strong> Available seats</strong>:{{seats[0]?.availableseats}}</h5>
+          <a class="btn" id="button" type="button" (click)="confirmbooking()" [class.disabled]="isdisabled">Confirm
+            booking</a>
+          <h5 class="text-warning" *ngIf="morethan6"><strong>cannot book more than 6 tickets</strong></h5>
+          <h5 class="text-warning" *ngIf="zeroselected"><strong>please book the seats to confirm booking</strong></h5>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>

@@ -1,0 +1,40 @@
+<div class="container">
+  <nav class="navbar navbar-expand-md ">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+      aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="">Home <span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <main role="main">
+    <div class="jumbotron">
+      <div class="container" id="container">
+        <div class="row">
+          <div class="col-md" *ngFor="let moviedata of movielist">
+            <img src="{{moviedata?.image}}"><br>
+            <h5><strong>Theatre name</strong> :{{moviedata?.theatrename}}</h5>
+            <h5><strong>Movie name</strong> :{{moviedata?.moviename}}</h5>
+            <a class="btn" id="button" type="button" routerLink="/ticketbooking" (click)="getseats(moviedata?.theatrename)">Book
+              tickets</a>
+          </div>
+        </div>
+      </div><br>
+      <h4>Search number of shows by theatre name</h4>
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="theatre name" aria-label="Recipient's username"
+          aria-describedby="basic-addon2" [(ngModel)]="theatrename">
+        <div class="input-group-append">
+          <a class="btn" id="button" type="button" (click)="getshows()">Submit</a>
+        </div>
+      </div>
+      <h5 *ngIf="shows"><strong>Number of shows</strong> :{{showsdata[0]?.shows}}</h5>
+    </div>
+  </main>
+</div>
+<router-outlet></router-outlet>
