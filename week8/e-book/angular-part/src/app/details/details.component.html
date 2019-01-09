@@ -1,0 +1,102 @@
+<div class="container">
+  <nav class="navbar navbar-expand-md navbar-dark bg-secondary">
+    <a class="navbar-brand" routerLink="">e<sup>2</sup> books</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+      aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="">Home<span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+  <main role="main">
+    <div class="jumbotron">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="{{fullbookdata[0].image}}">
+              <div class="card-body">
+                <h5 class="card-title">{{fullbookdata[0].bookname}}</h5>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item"><strong>Book id</strong>: {{fullbookdata[0].id}}</li>
+                <li class="list-group-item"><strong>Author</strong>: {{fullbookdata[0].author}}</li>
+                <li class="list-group-item"><strong>Department</strong>: {{fullbookdata[0].dept}}</li>
+              </ul>
+              <div class="card-body">
+                <a href="{{fullbookdata[0].url}}" target="_blank" class="card-link">Download</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card" style="width: 18rem;">
+              <div class="card-body">
+                <h5 class="card-title">Ratings</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Onestar :<strong>{{fullbookdata[0].onestar}}</strong></h6>
+                <div>
+                  <div class="row">
+                    <div class="col-md-10">
+                      <p class="border border-dark">
+                        <ngb-progressbar value="{{fullbookdata[0]?.onestar}}" type="{{color[0]}}"></ngb-progressbar>
+                      </p>
+                    </div>
+                  </div>
+                  <h6 class="card-subtitle mb-2 text-muted">Twostars :<strong>{{fullbookdata[0].twostar}}</strong></h6>
+                  <div class="row">
+                    <div class="col-md-10">
+                      <p class="border border-dark">
+                        <ngb-progressbar value="{{fullbookdata[0]?.twostar}}" type="{{color[1]}}"></ngb-progressbar>
+                      </p>
+                    </div>
+                  </div>
+                  <h6 class="card-subtitle mb-2 text-muted">Threestars :<strong>{{fullbookdata[0].threestar}}</strong></h6>
+                  <div class="row">
+                    <div class="col-md-10">
+                      <p class="border border-dark">
+                        <ngb-progressbar value="{{fullbookdata[0]?.threestar}}" type="{{color[2]}}"></ngb-progressbar>
+                      </p>
+                    </div>
+                  </div>
+                  <h6 class="card-subtitle mb-2 text-muted">Fourstars :<strong>{{fullbookdata[0].fourstar}}</strong></h6>
+                  <div class="row">
+                    <div class="col-md-10">
+                      <p class="border border-dark">
+                        <ngb-progressbar value="{{fullbookdata[0]?.fourstar}}" type="{{color[3]}}"></ngb-progressbar>
+                      </p>
+                    </div>
+                  </div>
+                  <h6 class="card-subtitle mb-2 text-muted">Fivestars :<strong>{{fullbookdata[0].fivestar}}</strong></h6>
+                  <div class="row">
+                    <div class="col-md-10">
+                      <p class="border border-dark">
+                        <ngb-progressbar value="{{fullbookdata[0]?.fivestar}}" type="{{color[4]}}"></ngb-progressbar>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <h6 class="card-subtitle mb-2 text-muted">Rate this book</h6>
+                <button class="card-link" (click)="decrement()">-</button>
+                <input class="short" type="number" [(ngModel)]="rating">
+                <button class="card-link" (click)="increment()">+</button>
+                <button class="card-link" (click)="updateInDataBase()">Submit</button>
+                <div class="card-body">
+                  {{finalresult?.response}}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+  </main>
+</div>

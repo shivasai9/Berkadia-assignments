@@ -1,0 +1,37 @@
+<div class="container">
+  <nav class="navbar navbar-expand-md navbar-dark bg-secondary">
+    <a class="navbar-brand" href="#">e<sup>2</sup> books</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+      aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+              <a class="nav-link" routerLink="">Home<span class="sr-only">(current)</span></a>
+            </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+  <main role="main">
+    <div class="jumbotron">
+      <div class="container">
+        <h1 class="display-3">Engineering ebooks</h1>
+        <p>this site contains all the engineering textbooks and the the hand written notes...</p>
+        <p><a class="btn btn-secondary btn-lg" routerLink="/books" role="button" (click)="renderEceBooks()">Electronics and communication engineering</a></p>
+        <p><a class="btn btn-secondary btn-lg padding" routerLink="/books" role="button" (click)="renderCseBooks()">Computer science engineering</a></p>
+        <p><a class="btn btn-secondary btn-lg padding1" routerLink="/books" role="button" (click)="renderEeeBooks()">Electrical and electronics engineering</a></p>
+        <p><a class="btn btn-secondary btn-lg padding2" routerLink="/books" role="button" (click)="renderCivilBooks()">Civil engineering</a></p>
+      </div>
+    </div>
+  </main>
+</div>
+
+
+
+
+
