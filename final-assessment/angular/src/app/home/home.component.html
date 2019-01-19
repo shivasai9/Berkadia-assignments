@@ -1,0 +1,23 @@
+<h2>total questions 10</h2>
+<div *ngFor="let question of questions;index as i">
+    <div *ngIf="value==i">
+        <h5>question Number: {{questions[i]?.qid}}</h5>
+        <h5>{{questions[i]?.question}}</h5>
+        <input type="checkbox" [(ngModel)]="op1">
+        <h6>{{questions[i]?.op1}}</h6>
+        <input type="checkbox" [(ngModel)]="op2">
+        <h6>{{questions[i]?.op2}}</h6>
+        <input type="checkbox" [(ngModel)]="op3">
+        <h6>{{questions[i]?.op3}}</h6>
+        <input type="checkbox" [(ngModel)]="op4">
+        <h6>{{questions[i]?.op4}}</h6>
+        <button (click)="previousQuestion()">previous</button>
+        <button (click)="nextQuestion()">nextquestion</button>
+        <button (click)="submit()">Submit</button>
+        <div *ngIf="status">
+            <h5 *ngIf="isCorrect" class="text-success"> answer is correct</h5>
+            <h5 *ngIf="!isCorrect" class="text-danger">answer is wrong</h5>
+        </div>
+        <button (click)="submitQuiz()" [disabled]="finalquestion">Submit quiz</button>
+    </div>
+</div>
