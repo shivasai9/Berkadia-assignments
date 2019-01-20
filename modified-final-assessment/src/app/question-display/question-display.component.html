@@ -1,0 +1,16 @@
+<div *ngFor='let question of randomquestions;index as i'>
+  <div *ngIf="sendqno(i)">
+    <h5>Question no:{{i+1}}</h5>
+    <h5>{{question.question}}</h5>
+    <div *ngFor='let op of randomoptions'>
+      <input ngModel type="checkbox" name="{{op}}" #checkbox="ngModel" (change)="checkOption(checkbox,i)">
+      <label>{{op}}</label>
+    </div>
+    <button (click)="nextQuestion()" [disabled]="!isdisabled">nextquestion</button>
+    <button (click)="submit(i)">submit</button>
+    <button (click)="submitQuiz()" [disabled]="isdisabled">submit quiz</button>
+    <h5 *ngIf="correct" class="text-success">Answer is correct</h5>
+    <h5 *ngIf="wrong" class="text-danger">Answer is wrong</h5>
+  </div> 
+</div>
+
