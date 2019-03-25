@@ -1,5 +1,5 @@
 /*
- usually while we are calling a unction we send some arguments
+ usually while we are calling a function we send some arguments
  */
 
  var add=function(passed)
